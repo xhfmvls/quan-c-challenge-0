@@ -8,10 +8,10 @@ def req_sql():
     # Establish a connection to the MySQL database
     # Change the credentials here
     conn = mysql.connector.connect(
-        host="database.quanc.com",
-        user="user1138",
-        password="P455WORD",
-        database="mydatabase"
+        host=os.getenv('HOST'),
+        user=os.getenv('USEC'),
+        password=os.getenv('PASSWORD'),
+        database=os.getenv('DATABASE')
     )
 
     # Create a cursor object to interact with the database
